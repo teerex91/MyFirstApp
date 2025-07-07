@@ -4,32 +4,22 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine(Divide(23,12) );
-        Console.ReadKey();
+        Calculate();
+        //Console.WriteLine(Calculate());
+        Console.Read();
     }
 
-    public static int Add(int a, int b)
+    public static int Calculate()
     {
-        return a + b;
+        Console.WriteLine("Enter first numbers to add:");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter second numbers to add:");
+        int b = Convert.ToInt32(Console.ReadLine());
+        int sum = a + b;
+        Console.WriteLine($"The sum of {a} and {b} is {sum}");
+        return sum;
+
     }
 
-    public static int Subtract(int a, int b)
-    {
-        return a - b;
-    }
-
-    public static int Multiply(int a, int b)
-    {
-        return a * b;
-    }
-
-    public static double Divide(double a, double b)
-    {
-        if (b == 0)
-        {
-            throw new DivideByZeroException("Cannot divide by zero.");
-        }
-        return a / b;
-    }
 
 }
