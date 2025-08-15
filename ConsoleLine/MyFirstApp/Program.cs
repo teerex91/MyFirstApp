@@ -4,32 +4,41 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine(Divide(23,12) );
-        Console.ReadKey();
-    }
+        Console.WriteLine("=== Loop Examples in C# ===");
 
-    public static int Add(int a, int b)
-    {
-        return a + b;
-    }
-
-    public static int Subtract(int a, int b)
-    {
-        return a - b;
-    }
-
-    public static int Multiply(int a, int b)
-    {
-        return a * b;
-    }
-
-    public static double Divide(double a, double b)
-    {
-        if (b == 0)
+        // 1. for loop - run a fixed number of times
+        Console.WriteLine("\nFor Loop:");
+        for (int i = 1; i <= 5; i++)
         {
-            throw new DivideByZeroException("Cannot divide by zero.");
+            Console.WriteLine($"Iteration {i}");
         }
-        return a / b;
-    }
 
+        // 2. while loop - run while condition is true
+        Console.WriteLine("\nWhile Loop:");
+        int count = 1;
+        while (count <= 5)
+        {
+            Console.WriteLine($"Count is {count}");
+            count++;
+        }
+
+        // 3. do...while loop - runs at least once
+        Console.WriteLine("\nDo...While Loop:");
+        int number = 1;
+        do
+        {
+            Console.WriteLine($"Number is {number}");
+            number++;
+        } while (number <= 5);
+
+        // 4. foreach loop - loop through items in a collection
+        Console.WriteLine("\nForeach Loop:");
+        string[] fruits = { "Apple", "Banana", "Cherry" };
+        foreach (string fruit in fruits)
+        {
+            Console.WriteLine($"Fruit: {fruit}");
+        }
+
+        Console.WriteLine("\nAll loops finished!");
+    }
 }
