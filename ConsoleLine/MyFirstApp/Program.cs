@@ -34,7 +34,7 @@ class Program
         }
 
         Console.Write("Do you have an ID? (yes/no): ");
-        string idResponse = Console.ReadLine().Trim().ToLower();
+        string? idResponse = Console.ReadLine()?.Trim().ToLower(); // Fix: Use null-conditional operator to safely handle null values
         bool hasID = (idResponse == "yes");
 
         if (age >= 18)
