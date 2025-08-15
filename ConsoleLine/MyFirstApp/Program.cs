@@ -4,39 +4,56 @@ class Program
 {
     static void Main()
     {
-        Calculate();
-        Console.Read();
-    }
+        // --- Simple if statement ---
+        Console.WriteLine("=== Simple if Statement ===");
+        Console.Write("Enter a number: ");
+        int number;
 
-    public static int Calculate()
-    {
-        int a, b;
-
-        Console.WriteLine("Enter first number to add:");
-        while (!int.TryParse(Console.ReadLine(), out a))
+        // Validate input using TryParse
+        while (!int.TryParse(Console.ReadLine(), out number))
         {
-            Console.WriteLine("Invalid input. Please enter a valid integer:");
+            Console.Write("Invalid input. Please enter a valid integer: ");
         }
 
-        Console.WriteLine("Enter second number to add:");
-        while (!int.TryParse(Console.ReadLine(), out b))
+        if (number > 0)
         {
-            Console.WriteLine("Invalid input. Please enter a valid integer:");
-        }
-
-        int sum = 0;
-
-        // Only add if both numbers are positive
-        if (a > 0 && b > 0)
-        {
-            sum = a + b;
-            Console.WriteLine($"The sum of {a} and {b} is {sum}");
+            Console.WriteLine("The number is positive.");
         }
         else
         {
-            Console.WriteLine("Both numbers must be positive to add.");
+            Console.WriteLine("The number is zero or negative.");
         }
 
-        return sum;
+        // --- Nested if statement ---
+        Console.WriteLine("\n=== Nested if Statement ===");
+        Console.Write("Enter your age: ");
+        int age;
+        while (!int.TryParse(Console.ReadLine(), out age))
+        {
+            Console.Write("Invalid input. Please enter a valid age: ");
+        }
+
+        Console.Write("Do you have an ID? (yes/no): ");
+        string idResponse = Console.ReadLine().Trim().ToLower();
+        bool hasID = (idResponse == "yes");
+
+        if (age >= 18)
+        {
+            if (hasID)
+            {
+                Console.WriteLine("You are allowed to enter.");
+            }
+            else
+            {
+                Console.WriteLine("You must have an ID to enter.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("You must be at least 18 years old.");
+        }
+
+        Console.WriteLine("\nProgram finished. Press any key to exit.");
+        Console.ReadKey();
     }
 }
