@@ -4,72 +4,48 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("=== Advanced Switch Example ===");
+        Console.WriteLine("=== If Statement vs Shortcut (Ternary) ===");
 
-        // --- Example 1: Multiple case labels ---
-        Console.Write("Enter a day number (1-7): ");
-        if (int.TryParse(Console.ReadLine(), out int dayNumber))
+        // Example 1: Standard if...else
+        Console.Write("Enter a number: ");
+        int number;
+        while (!int.TryParse(Console.ReadLine(), out number))
         {
-            switch (dayNumber)
-            {
-                case 1:
-                case 7:
-                    Console.WriteLine("Weekend!");
-                    break;
-
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                    Console.WriteLine("Weekday.");
-                    break;
-
-                default:
-                    Console.WriteLine("Invalid day number.");
-                    break;
-            }
+            Console.Write("Invalid input. Enter a valid integer: ");
         }
 
-        // --- Example 2: Pattern matching ---
+        string result;
+        if (number > 0)
+        {
+            result = "Positive";
+        }
+        else
+        {
+            result = "Zero or Negative";
+        }
+        Console.WriteLine($"[If Statement] The number is: {result}");
+
+        // Example 2: Ternary operator (shortcut)
+        string resultShortcut = (number > 0) ? "Positive" : "Zero or Negative";
+        Console.WriteLine($"[Ternary Shortcut] The number is: {resultShortcut}");
+
+        // Example 3: Nested ternary
         Console.Write("\nEnter your score (0-100): ");
-        if (int.TryParse(Console.ReadLine(), out int score))
+        int score;
+        while (!int.TryParse(Console.ReadLine(), out score))
         {
-            switch (score)
-            {
-                case int s when s >= 90:
-                    Console.WriteLine("Grade: A");
-                    break;
-                case int s when s >= 80:
-                    Console.WriteLine("Grade: B");
-                    break;
-                case int s when s >= 70:
-                    Console.WriteLine("Grade: C");
-                    break;
-                case int s when s >= 60:
-                    Console.WriteLine("Grade: D");
-                    break;
-                default:
-                    Console.WriteLine("Grade: F");
-                    break;
-            }
+            Console.Write("Invalid input. Enter a number between 0 and 100: ");
         }
 
-        // --- Example 3: Switch expression ---
-        Console.Write("\nEnter a fruit name: ");
-        string fruit = Console.ReadLine()?.ToLower();
+        string grade = (score >= 90) ? "A"
+                     : (score >= 80) ? "B"
+                     : (score >= 70) ? "C"
+                     : (score >= 60) ? "D"
+                     : "F";
 
-        string category = fruit switch
-        {
-            "apple" or "banana" or "orange" => "Fruit",
-            "carrot" or "potato" or "onion" => "Vegetable",
-            null or "" => "No input provided",
-            _ => "Unknown food category"
-        };
+        Console.WriteLine($"[Ternary Shortcut] Your grade is: {grade}");
 
-        Console.WriteLine($"Category: {category}");
-
-        Console.WriteLine("\nPress any key to exit.");
+        Console.WriteLine("\nProgram finished. Press any key to exit.");
         Console.ReadKey();
     }
 }
