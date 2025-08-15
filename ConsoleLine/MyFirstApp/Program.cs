@@ -4,38 +4,70 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("=== Switch & Case Example ===");
-        Console.WriteLine("Choose an option:");
-        Console.WriteLine("1 - Say Hello");
-        Console.WriteLine("2 - Show Date");
-        Console.WriteLine("3 - Show Time");
-        Console.WriteLine("4 - Exit");
+        Console.WriteLine("=== Advanced Switch Example ===");
 
-        Console.Write("Enter your choice (1-4): ");
-        string choice = Console.ReadLine();
-
-        switch (choice)
+        // --- Example 1: Multiple case labels ---
+        Console.Write("Enter a day number (1-7): ");
+        if (int.TryParse(Console.ReadLine(), out int dayNumber))
         {
-            case "1":
-                Console.WriteLine("Hello there!");
-                break;
+            switch (dayNumber)
+            {
+                case 1:
+                case 7:
+                    Console.WriteLine("Weekend!");
+                    break;
 
-            case "2":
-                Console.WriteLine($"Today's date is {DateTime.Now.ToShortDateString()}");
-                break;
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                    Console.WriteLine("Weekday.");
+                    break;
 
-            case "3":
-                Console.WriteLine($"Current time is {DateTime.Now.ToShortTimeString()}");
-                break;
-
-            case "4":
-                Console.WriteLine("Exiting program...");
-                break;
-
-            default:
-                Console.WriteLine("Invalid choice. Please enter 1-4.");
-                break;
+                default:
+                    Console.WriteLine("Invalid day number.");
+                    break;
+            }
         }
+
+        // --- Example 2: Pattern matching ---
+        Console.Write("\nEnter your score (0-100): ");
+        if (int.TryParse(Console.ReadLine(), out int score))
+        {
+            switch (score)
+            {
+                case int s when s >= 90:
+                    Console.WriteLine("Grade: A");
+                    break;
+                case int s when s >= 80:
+                    Console.WriteLine("Grade: B");
+                    break;
+                case int s when s >= 70:
+                    Console.WriteLine("Grade: C");
+                    break;
+                case int s when s >= 60:
+                    Console.WriteLine("Grade: D");
+                    break;
+                default:
+                    Console.WriteLine("Grade: F");
+                    break;
+            }
+        }
+
+        // --- Example 3: Switch expression ---
+        Console.Write("\nEnter a fruit name: ");
+        string fruit = Console.ReadLine()?.ToLower();
+
+        string category = fruit switch
+        {
+            "apple" or "banana" or "orange" => "Fruit",
+            "carrot" or "potato" or "onion" => "Vegetable",
+            null or "" => "No input provided",
+            _ => "Unknown food category"
+        };
+
+        Console.WriteLine($"Category: {category}");
 
         Console.WriteLine("\nPress any key to exit.");
         Console.ReadKey();
