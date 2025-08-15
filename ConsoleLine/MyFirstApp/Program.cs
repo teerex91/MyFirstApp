@@ -4,48 +4,41 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("=== If Statement vs Shortcut (Ternary) ===");
+        Console.WriteLine("=== Loop Examples in C# ===");
 
-        // Example 1: Standard if...else
-        Console.Write("Enter a number: ");
-        int number;
-        while (!int.TryParse(Console.ReadLine(), out number))
+        // 1. for loop - run a fixed number of times
+        Console.WriteLine("\nFor Loop:");
+        for (int i = 1; i <= 5; i++)
         {
-            Console.Write("Invalid input. Enter a valid integer: ");
+            Console.WriteLine($"Iteration {i}");
         }
 
-        string result;
-        if (number > 0)
+        // 2. while loop - run while condition is true
+        Console.WriteLine("\nWhile Loop:");
+        int count = 1;
+        while (count <= 5)
         {
-            result = "Positive";
-        }
-        else
-        {
-            result = "Zero or Negative";
-        }
-        Console.WriteLine($"[If Statement] The number is: {result}");
-
-        // Example 2: Ternary operator (shortcut)
-        string resultShortcut = (number > 0) ? "Positive" : "Zero or Negative";
-        Console.WriteLine($"[Ternary Shortcut] The number is: {resultShortcut}");
-
-        // Example 3: Nested ternary
-        Console.Write("\nEnter your score (0-100): ");
-        int score;
-        while (!int.TryParse(Console.ReadLine(), out score))
-        {
-            Console.Write("Invalid input. Enter a number between 0 and 100: ");
+            Console.WriteLine($"Count is {count}");
+            count++;
         }
 
-        string grade = (score >= 90) ? "A"
-                     : (score >= 80) ? "B"
-                     : (score >= 70) ? "C"
-                     : (score >= 60) ? "D"
-                     : "F";
+        // 3. do...while loop - runs at least once
+        Console.WriteLine("\nDo...While Loop:");
+        int number = 1;
+        do
+        {
+            Console.WriteLine($"Number is {number}");
+            number++;
+        } while (number <= 5);
 
-        Console.WriteLine($"[Ternary Shortcut] Your grade is: {grade}");
+        // 4. foreach loop - loop through items in a collection
+        Console.WriteLine("\nForeach Loop:");
+        string[] fruits = { "Apple", "Banana", "Cherry" };
+        foreach (string fruit in fruits)
+        {
+            Console.WriteLine($"Fruit: {fruit}");
+        }
 
-        Console.WriteLine("\nProgram finished. Press any key to exit.");
-        Console.ReadKey();
+        Console.WriteLine("\nAll loops finished!");
     }
 }
