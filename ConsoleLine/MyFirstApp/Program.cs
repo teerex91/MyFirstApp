@@ -10,11 +10,19 @@ class Program
 
     public static int Calculate()
     {
+        int a, b;
+
         Console.WriteLine("Enter first number to add:");
-        int a = Convert.ToInt32(Console.ReadLine());
+        while (!int.TryParse(Console.ReadLine(), out a))
+        {
+            Console.WriteLine("Invalid input. Please enter a valid integer:");
+        }
 
         Console.WriteLine("Enter second number to add:");
-        int b = Convert.ToInt32(Console.ReadLine());
+        while (!int.TryParse(Console.ReadLine(), out b))
+        {
+            Console.WriteLine("Invalid input. Please enter a valid integer:");
+        }
 
         int sum = 0;
 
