@@ -4,56 +4,40 @@ class Program
 {
     static void Main()
     {
-        // --- Simple if statement ---
-        Console.WriteLine("=== Simple if Statement ===");
-        Console.Write("Enter a number: ");
-        int number;
+        Console.WriteLine("=== Switch & Case Example ===");
+        Console.WriteLine("Choose an option:");
+        Console.WriteLine("1 - Say Hello");
+        Console.WriteLine("2 - Show Date");
+        Console.WriteLine("3 - Show Time");
+        Console.WriteLine("4 - Exit");
 
-        // Validate input using TryParse
-        while (!int.TryParse(Console.ReadLine(), out number))
+        Console.Write("Enter your choice (1-4): ");
+        string choice = Console.ReadLine();
+
+        switch (choice)
         {
-            Console.Write("Invalid input. Please enter a valid integer: ");
+            case "1":
+                Console.WriteLine("Hello there!");
+                break;
+
+            case "2":
+                Console.WriteLine($"Today's date is {DateTime.Now.ToShortDateString()}");
+                break;
+
+            case "3":
+                Console.WriteLine($"Current time is {DateTime.Now.ToShortTimeString()}");
+                break;
+
+            case "4":
+                Console.WriteLine("Exiting program...");
+                break;
+
+            default:
+                Console.WriteLine("Invalid choice. Please enter 1-4.");
+                break;
         }
 
-        if (number > 0)
-        {
-            Console.WriteLine("The number is positive.");
-        }
-        else
-        {
-            Console.WriteLine("The number is zero or negative.");
-        }
-
-        // --- Nested if statement ---
-        Console.WriteLine("\n=== Nested if Statement ===");
-        Console.Write("Enter your age: ");
-        int age;
-        while (!int.TryParse(Console.ReadLine(), out age))
-        {
-            Console.Write("Invalid input. Please enter a valid age: ");
-        }
-
-        Console.Write("Do you have an ID? (yes/no): ");
-        string? idResponse = Console.ReadLine()?.Trim().ToLower(); // Fix: Use null-conditional operator to safely handle null values
-        bool hasID = (idResponse == "yes");
-
-        if (age >= 18)
-        {
-            if (hasID)
-            {
-                Console.WriteLine("You are allowed to enter.");
-            }
-            else
-            {
-                Console.WriteLine("You must have an ID to enter.");
-            }
-        }
-        else
-        {
-            Console.WriteLine("You must be at least 18 years old.");
-        }
-
-        Console.WriteLine("\nProgram finished. Press any key to exit.");
+        Console.WriteLine("\nPress any key to exit.");
         Console.ReadKey();
     }
 }
