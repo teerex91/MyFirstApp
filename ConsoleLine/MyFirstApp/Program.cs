@@ -9,7 +9,7 @@ class Program
 {
     static void Main()
     {
-        Human person1 = new Human("Alice", 25);
+        Human person1 = new Human();
         person1.Introduce();
 
         Human person2 = new Human("Bob", 30);

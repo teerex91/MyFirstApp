@@ -12,7 +12,14 @@ namespace MyFirstApp
         public string Name { get; set; }
         public int Age { get; set; }
 
-        // Constructor (runs when you create a Human object)
+        // Default constructor
+        public Human()
+        {
+            Name = "Unknown";
+            Age = 0;
+        }
+
+        // Parameterized constructor
         public Human(string name, int age)
         {
             Name = name;
