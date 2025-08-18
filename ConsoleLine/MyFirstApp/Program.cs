@@ -9,14 +9,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create an object (instance of Car)
-        Car myCar = new Car();
+        Car car1 = new Car("BMW", 150);
+        car1.Drive();
 
-        // Set values
-        myCar.Brand = "Tesla";
-        myCar.Speed = 120;
-
-        // Call method
-        myCar.Drive();
+        Car car2 = new Car("Audi", 180);
+        car2.Drive();
     }
 } 

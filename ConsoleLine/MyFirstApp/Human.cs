@@ -8,14 +8,20 @@ namespace MyFirstApp
 {
     public class Car
     {
-        // Properties (data)
         public string Brand { get; set; }
         public int Speed { get; set; }
 
-        // Method (behavior)
+        // Constructor
+        public Car(string brand, int speed)
+        {
+            Brand = brand;
+            Speed = speed;
+        }
+
         public void Drive()
         {
             Console.WriteLine($"{Brand} is driving at {Speed} km/h.");
         }
     }
+
 }
