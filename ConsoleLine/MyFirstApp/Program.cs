@@ -9,21 +9,10 @@ class Program
 {
     static void Main(string[] args)
     {
-       //Create an object of the class 
-       //an instand of human 
-       Human denis = new Human();
-       // acess public varible from outside, and even change it 
-       denis.firstName = "Denis";
-       // call the method of the class
-        denis.IntroduceMySelf();
+        Car car1 = new Car("BMW", 150);
+        car1.Drive();
 
-        // Create another object of the class
-        Human teerex = new Human();
-        // Access the public variable from outside, and even change it
-        teerex.firstName = "Teerex dino";
-        // Call the method of the class
-        teerex.IntroduceMySelf();
-
-        Console.ReadKey();
+        Car car2 = new Car("Audi", 180);
+        car2.Drive();
     }
 } 

@@ -6,17 +6,22 @@ using System.Threading.Tasks;
 
 namespace MyFirstApp
 {
-    // this class is a bludprint for a datatype
-    internal class Human
+    public class Car
     {
-        // menber and variable 
-        public string firstName = "teerex";
+        public string Brand { get; set; }
+        public int Speed { get; set; }
 
-        // member 
-        public void IntroduceMySelf()
+        // Constructor
+        public Car(string brand, int speed)
         {
-            // this is a method
-            Console.WriteLine("Hello, my name is " + firstName);
+            Brand = brand;
+            Speed = speed;
+        }
+
+        public void Drive()
+        {
+            Console.WriteLine($"{Brand} is driving at {Speed} km/h.");
         }
     }
+
 }
