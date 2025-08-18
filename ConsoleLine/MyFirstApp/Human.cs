@@ -6,21 +6,30 @@ using System.Threading.Tasks;
 
 namespace MyFirstApp
 {
-    public class Car
+    public class Human
     {
-        public string Brand { get; set; }
-        public int Speed { get; set; }
+        // Properties
+        public string Name { get; set; }
+        public int Age { get; set; }
 
-        // Constructor
-        public Car(string brand, int speed)
+        // Default constructor
+        public Human()
         {
-            Brand = brand;
-            Speed = speed;
+            Name = "Unknown";
+            Age = 0;
         }
 
-        public void Drive()
+        // Parameterized constructor
+        public Human(string name, int age)
         {
-            Console.WriteLine($"{Brand} is driving at {Speed} km/h.");
+            Name = name;
+            Age = age;
+        }
+
+        // Method (behavior)
+        public void Introduce()
+        {
+            Console.WriteLine($"Hi, my name is {Name} and I am {Age} years old.");
         }
     }
 
