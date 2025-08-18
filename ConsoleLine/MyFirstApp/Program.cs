@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Car car1 = new Car("BMW", 150);
-        car1.Drive();
+        Human person1 = new Human("Alice", 25);
+        person1.Introduce();
 
-        Car car2 = new Car("Audi", 180);
-        car2.Drive();
+        Human person2 = new Human("Bob", 30);
+        person2.Introduce();
     }
 } 
