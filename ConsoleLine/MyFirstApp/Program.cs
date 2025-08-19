@@ -17,5 +17,8 @@ class Program
 
         Human person3 = new Human("TeeRex", 24);
         person3.Introduce();
+
+        Human person4 = new Human("Thawary", 07);
+        person4.Introduce();
     }
 } 
