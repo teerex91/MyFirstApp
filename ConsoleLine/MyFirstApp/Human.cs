@@ -43,7 +43,7 @@ namespace MyFirstApp
             if(Age != 0)
                 Console.WriteLine("Hi, my name is {0}, I am {1} year old and my eyes is {2}", Name, Age, eyecolor);
             else
-                Console.WriteLine("Hi, my name is {0}, and my eyes is {1}", Name, eyecolor);
+                Console.WriteLine("Hello, my name is {0}, and my eyes is {1}", Name, eyecolor);
         }
     }
 
