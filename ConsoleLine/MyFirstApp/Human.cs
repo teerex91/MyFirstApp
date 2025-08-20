@@ -9,27 +9,30 @@ namespace MyFirstApp
     public class Human
     {
         // Properties
-        public string Name { get; set; }
-        public int Age { get; set; }
+        private string Name { get; set; }
+        private int Age { get; set; }
+        private string eyecolor { get; set; }
 
         // Default constructor
         public Human()
         {
             Name = "Unknown";
             Age = 0;
+            eyecolor = "Unknown";
         }
 
         // Parameterized constructor
-        public Human(string name, int age)
+        public Human(string name, int age, string eyecolor)
         {
             Name = name;
             Age = age;
+            this.eyecolor = eyecolor;
         }
 
         // Method (behavior)
         public void Introduce()
         {
-            Console.WriteLine($"Hi, my name is {Name} and I am {Age} years old.");
+            Console.WriteLine($"Hi, my name is {Name}, I am {Age} years old and i have color of my eyes is {eyecolor}");
         }
     }
 
