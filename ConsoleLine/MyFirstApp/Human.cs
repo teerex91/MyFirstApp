@@ -9,8 +9,8 @@ namespace MyFirstApp
     public class Human
     {
         // Properties
-        public string Name { get; set; }
-        public int Age { get; set; }
+        private string Name { get; set; }
+        private int Age { get; set; }
 
         // Default constructor
         public Human()
