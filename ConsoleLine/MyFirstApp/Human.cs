@@ -22,6 +22,13 @@ namespace MyFirstApp
         }
 
         // Parameterized constructor
+
+        public Human(string name, string eyecolor)
+        {
+            Name = name;
+            this.eyecolor = eyecolor;
+        }
+
         public Human(string name, int age, string eyecolor)
         {
             Name = name;
@@ -33,10 +40,10 @@ namespace MyFirstApp
         public void Introduce()
         {
             //Console.WriteLine($"Hi, my name is {Name}, I am {Age} years old and i have color of my eyes is {eyecolor}");
-            if(Age <= 1)
+            if(Age != 0)
                 Console.WriteLine("Hi, my name is {0}, I am {1} year old and my eyes is {2}", Name, Age, eyecolor);
             else
-                Console.WriteLine("Hi, my name is {0}, I am {1} years old and my eyes is {2}", Name, Age, eyecolor);
+                Console.WriteLine("Hi, my name is {0}, and my eyes is {1}", Name, eyecolor);
         }
     }
 
