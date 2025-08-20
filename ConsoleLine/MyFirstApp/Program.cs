@@ -20,5 +20,8 @@ class Program
 
         Human person4 = new Human("Thawary", 07, "Red");
         person4.Introduce();
+
+        Human person5 = new Human("Thawary", 01, "Brown");
+        person5.Introduce();
     }
 } 

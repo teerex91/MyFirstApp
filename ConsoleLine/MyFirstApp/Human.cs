@@ -33,7 +33,10 @@ namespace MyFirstApp
         public void Introduce()
         {
             //Console.WriteLine($"Hi, my name is {Name}, I am {Age} years old and i have color of my eyes is {eyecolor}");
-            Console.WriteLine("Hi, my name is {0}, I am {1} years old and my eyes is {2}", Name, Age, eyecolor);
+            if(Age <= 1)
+                Console.WriteLine("Hi, my name is {0}, I am {1} year old and my eyes is {2}", Name, Age, eyecolor);
+            else
+                Console.WriteLine("Hi, my name is {0}, I am {1} years old and my eyes is {2}", Name, Age, eyecolor);
         }
     }
 
