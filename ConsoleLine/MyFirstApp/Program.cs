@@ -7,24 +7,12 @@ using System.Threading.Tasks;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        Human person1 = new Human();
-        person1.Introduce();
-
-        Human person2 = new Human("Bob", 30, "black");
-        person2.Introduce();
-
-        Human person3 = new Human("TeeRex", 24, "Blue");
-        person3.Introduce();
-
-        Human person4 = new Human("Thawany", 07, "Red");
-        person4.Introduce();
-
-        Human person5 = new("Thawary", "Brown");
-        person5.Introduce();
-
-        Human person6 = new("jelly", "Brownry");
-        person6.Introduce();
+        Box box = new Box();
+        box.Length = 10;
+        box.Width = 5;
+        box.Height = 2;
+        box.Displayinfo();
     }
 } 
