@@ -1,10 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Learn Programing\\C#\\",
+  "WorkspaceRootPath": "C:\\Users\\Vanthorng\\Learn Program\\C#\\MyFirstApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7D637F9-6AE3-40CE-A5A2-C5C79369E3FA}|MyFirstApp\\MyFirstApp.csproj|d:\\learn programing\\c#\\myfirstapp\\myfirstapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7D637F9-6AE3-40CE-A5A2-C5C79369E3FA}|MyFirstApp\\MyFirstApp.csproj|solutionrelative:myfirstapp\\myfirstapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Learn Programing\\C#\\MyFirstApp\\MyFirstApp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +13,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Learn Programing\\C#\\MyFirstApp\\MyFirstApp\\Program.cs",
-              "RelativeDocumentMoniker": "MyFirstApp\\MyFirstApp\\Program.cs",
               "ToolTip": "D:\\Learn Programing\\C#\\MyFirstApp\\MyFirstApp\\Program.cs",
-              "RelativeToolTip": "MyFirstApp\\MyFirstApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T06:05:30.616Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T06:05:30.616Z"
             }
           ]
         }
