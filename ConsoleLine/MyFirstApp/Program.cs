@@ -9,13 +9,22 @@ class Program
 {
     static void Main(string[] args)
     {
-        Box box = new Box();
-        //box.Length = 10;
-        box.SetLength(-2); // Fixed: Changed 'setlength' to 'setLength' for proper naming convention
-        box.Width = 5;
-        box.Height = 2;
-        Console.WriteLine("Box length is " + box.GetLength());
-        Console.WriteLine("Box Volume is " + box.GetVolume());
-        box.Displayinfo();
+        // Create Person
+        Person person = new Person();
+        person.Name = "Alice";
+        person.Age = -5;   // validation will set it to 0
+
+        Console.WriteLine(person.Info);
+
+        // Create Student
+        Student student = new Student();
+        student.Name = "Bob";
+        student.Age = 20;
+        student.School = "Tech University";
+        student.GPA = 3.8;
+
+        Console.WriteLine(student.StudentInfo);
+
+        Console.ReadLine(); // keep console open
     }
 } 
