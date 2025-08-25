@@ -19,6 +19,17 @@ class Program
 
         car.Drive();
 
+        Console.WriteLine("First part: " + car[1]); // indexer
+
+        Car car1 = new Car("ISUZU", "D'Max");
+
+        Console.WriteLine($"Brand: {car1.Brand}");
+        Console.WriteLine($"Model: {car1.Model}");
+        Console.WriteLine($"Wheels: {Car.Wheels}");
+        Console.WriteLine($"Created On: {car1.CreatedOn}");
+
+        car.Drive();
+
         Console.WriteLine("First part: " + car[0]); // indexer
     }
 }
