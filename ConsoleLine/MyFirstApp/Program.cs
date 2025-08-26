@@ -12,11 +12,8 @@ class Program
         Car car = new Car("Toyota", "Corolla");
 
         Console.WriteLine($"Brand: {car.Brand}");
-
         Console.WriteLine($"Model: {car.Model}");
-
         Console.WriteLine($"Wheels: {Car.Wheels}");
-
         Console.WriteLine($"Created On: {car.CreatedOn}");
 
         car.Drive();
